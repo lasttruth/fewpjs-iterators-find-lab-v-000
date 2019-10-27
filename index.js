@@ -9,8 +9,9 @@ function testFunc() {
   return "hi"
 }
 
-function superbowlWin(record) {
-  return record.result === "W"
-}
 
-record.find(superbowlWin).year
+superbowlWin = (y)=> {
+  let result = y.find(y => y.result === "W"
+  )
+  return !!result ? result.year : undefined
+}
